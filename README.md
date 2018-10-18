@@ -8,8 +8,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Overview
 
-This project can run basic intel-based cpu commands like add, mov, inc, etc. Working with 32 bit data and registers only. You can use this project
-as a virtual assembler machine inside web browser app.
+This project uses free and public source OSM data for map visualization. Also project uses collected data about
+real estate prices and show houses/appertments for sale as a points on map.
+Project create pric prediction model for any map point and display this model as a colored gradient map.
+Details will be written later.
 
 ### Implementation notes
 
