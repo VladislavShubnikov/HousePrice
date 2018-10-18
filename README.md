@@ -1,9 +1,9 @@
-# AsmVm
+# House Price Prediction Heat Map
 
 House price prediciton project. Predicitions are rendered as colored heat map. Project based on Angular 6.2.1 + ThreeJS.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
-![Background image](src/logo_page.jpg)
+![Background image](src/logo_page.png)
 
 
 ### Overview
