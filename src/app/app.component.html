@@ -1,0 +1,120 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+
+<div class="container">
+
+  <div class="text-center">
+    <h2>
+      {{ m_title }}
+    </h2>
+  </div>
+
+  
+<div class="row"> 
+
+  <div class="col-2">
+    Навигация:
+    <i class="fa fa-plus"></i>
+
+    <button (click)="onClickLoadMap()" class="btn btn-success">
+      Загрузить карту СПб
+    </button>
+
+    <table class="table">
+      <tbody>
+      
+        <tr>
+          <td>
+            
+            <button (click)="onClickPlus()" class="btn btn-success">
+              +
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button (click)="onClickMinus()" class="btn btn-success">
+              -
+            </button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+    <table class="table">
+      <tbody>
+      
+        <tr>
+          <td>
+            &nbsp;
+          </td>
+          <td>
+            <button (click)="onClickUp()" class="btn btn-success">
+              ^
+            </button>
+          </td>
+          <td>
+            &nbsp;
+          </td>
+        </tr>        
+
+        <tr>
+          <td>
+            <button (click)="onClickLeft()" class="btn btn-success">
+              <
+            </button>
+          </td>
+          <td>
+            &nbsp;
+          </td>
+          <td>
+            <button (click)="onClickRight()" class="btn btn-success">
+              >
+            </button>
+          </td>
+        </tr>        
+
+        <tr>
+          <td>
+            &nbsp;
+          </td>
+          <td>
+            <button (click)="onClickDown()" class="btn btn-success">
+              v
+            </button>
+          </td>
+          <td>
+            &nbsp;
+          </td>
+        </tr>        
+        
+        
+      </tbody>
+    </table>
+    
+  </div>
+
+  <div class="col-10">
+    Карта:
+    <app-scene></app-scene>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-2">
+  </div>
+  <div class="col-8">
+    <!-- Database -->
+    <app-database></app-database>
+  </div>
+  <div class="col-2">
+  </div>
+</div>
+
+
+  
+
+</div>
+
