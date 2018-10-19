@@ -8,15 +8,9 @@
   <div class="card-body">
     Небольшой дамп данных из загруженной карты:
     <span *ngIf="m_database">
-    <p>
-      Узел[0] = {{m_nodes[0].x}}, {{m_nodes[0].y}}
-    </p>
-    <p>
-      Улица[0] = {{m_database.streets[0]}}
-    </p>
-    <p>
+      Node[0] = {{m_nodes[0].x}}, {{m_nodes[0].y}}.
+      Улица[0] = {{m_database.streets[0]}}.
       Путь[0]. t = {{m_database.ways[0].t}}, s = {{m_database.ways[0].s}}, numNodes = {{m_database.ways[0].n}}, nodeIndex[0] = {{m_database.ways[0].d[0]}}
-    </p>
     </span>
     
   </div>

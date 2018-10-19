@@ -1,52 +1,51 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 
-<div class="container">
 
-  <div class="text-center">
-    <h2>
-      {{ m_title }}
-    </h2>
-  </div>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-0 py-md-0">
+  <a class="nav-link py-0" href="#">
+    <button (click)="onClickLoadMap()" class="btn btn-success">
+      {{m_strLoadMap}}
+    </button>
+  </a>
   
+  <ul class="nav navbar-nav mx-auto">
+    <li class="nav-item">
+      <a class="nav-link py-0" href="#">
+        {{ m_title }}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+ 
 <div class="row"> 
 
+  <div class="col-10">
+    <app-scene></app-scene>
+  </div>
+
   <div class="col-2">
-    Навигация:
+    <!-- TODO: here should be icon -->
     <i class="fa fa-plus"></i>
 
-    <button (click)="onClickLoadMap()" class="btn btn-success">
-      Загрузить карту СПб
-    </button>
-
-    <table class="table">
-      <tbody>
-      
-        <tr>
-          <td>
-            
-            <button (click)="onClickPlus()" class="btn btn-success">
-              +
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <button (click)="onClickMinus()" class="btn btn-success">
-              -
-            </button>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
+    <ul class="list-group">
+      <li class="list-group-item border-0 py-1">
+        <button (click)="onClickPlus()" class="btn btn-success">
+          +
+        </button>
+      </li>
+      <li class="list-group-item border-0 py-1">
+        <button (click)="onClickMinus()" class="btn btn-success">
+          -
+        </button>
+      </li>
+    </ul>
     
-    <table class="table">
+    <table class="table borderless">
       <tbody>
       
-        <tr>
+        <tr class="borderless">
           <td>
             &nbsp;
           </td>
@@ -96,25 +95,19 @@
     
   </div>
 
-  <div class="col-10">
-    Карта:
-    <app-scene></app-scene>
-  </div>
 </div>
 
 <div class="row">
-  <div class="col-2">
+  <div class="col-1">
   </div>
-  <div class="col-8">
+  <div class="col-10">
     <!-- Database -->
     <app-database></app-database>
   </div>
-  <div class="col-2">
+  <div class="col-1">
   </div>
 </div>
 
 
-  
 
-</div>
 

@@ -184,6 +184,15 @@ export class SceneComponent implements AfterViewInit {
         // requestAnimationFrame(render);
         component.render();
     }());
+
+    // this.m_canvas.addEventListener( 'resize', () => {
+    window.addEventListener( 'resize', () => {
+      const wNew = window.innerWidth;
+      const hNew = window.innerHeight;
+      this.m_renderer.setSize(wNew, hNew);
+      // console.log(`Window has resized. render  = ${wNew} * ${hNew}`);
+      this.render();
+    }, false );
   }
   public render() {
     this.m_renderer.render(this.m_scene, this.m_camera);
@@ -244,6 +253,19 @@ export class SceneComponent implements AfterViewInit {
    this.render();
   }
 
+  // ****************************************************************
+  // Mouse events
+  // ****************************************************************
+
+  public onMouseWheel(evt: WheelEvent) {
+    // console.log(`onMouseWheel. dy = ${evt.deltaY}`);
+    const delta = evt.deltaY;
+    if (delta > 0) {
+      this.onClickPlus();
+    } else {
+      this.onClickMinus();
+    }
+  }
 
   public onMouseDown(event: MouseEvent) {
     this.m_mousePressed = true;
@@ -271,11 +293,14 @@ export class SceneComponent implements AfterViewInit {
     });
     */
   }
-  public onMouseMove(event: MouseEvent) {
+  public onMouseMove(evt: MouseEvent) {
     // console.log('onMouseMove');
     if (this.m_mousePressed) {
-      const xMouse = +(event.clientX / this.m_renderer.domElement.clientWidth) * 2 - 1;
-      const yMouse = -(event.clientY / this.m_renderer.domElement.clientHeight) * 2 + 1;
+      const xCoord = evt.clientX;
+      const yCoord = evt.clientY;
+      // console.log(`xCoord = ${xCoord}, yCoord = ${yCoord}`);
+      const xMouse = +(xCoord / this.m_renderer.domElement.clientWidth) * 2 - 1;
+      const yMouse = -(yCoord / this.m_renderer.domElement.clientHeight) * 2 + 1;
       const dx = xMouse - this.m_xMousePrev;
       const dy = yMouse - this.m_yMousePrev;
       this.m_camera.position.x -= dx;
@@ -287,7 +312,7 @@ export class SceneComponent implements AfterViewInit {
   }
 
   public onMouseUp(event: MouseEvent) {
-    console.log('onMouseUp');
+    // console.log('onMouseUp');
     this.m_mousePressed = false;
   }
 

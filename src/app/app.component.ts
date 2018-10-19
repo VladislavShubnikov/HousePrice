@@ -30,6 +30,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   // Data
   // *****************************
   m_title: string;
+  m_strLoadMap: string;
 
   @ViewChild(SceneComponent)
   m_scene: SceneComponent;
@@ -44,7 +45,8 @@ export class AppComponent implements AfterViewInit, OnInit {
   // *****************************
 
   constructor() {
-    this.m_title = 'Россия. Санкт-Петербург. Предсказание цены недвижимости';
+    this.m_title = 'Предсказание цены недвижимости';
+    this.m_strLoadMap = 'Загрузить карту СПб';
     this.m_scene = null;
     this.m_database = null;
   }
