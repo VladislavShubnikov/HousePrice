@@ -46,13 +46,13 @@ More details will be written later
 
 ## References
 We have used following software, databases and articles for our project:
-[Osm major world cittes database](http://download.bbbike.org/osm/bbbike/)
-[Angular 6.1 framework](https://angular.io)
-[Inverse Distance Weighting (IDW) idea](https://en.wikipedia.org/wiki/Inverse_distance_weighting)
-[Build heat map on the IDW base](https://github.com/optimisme/javascript-temperatureMap)
-[Build heat map color gradients](http://www.andrewnoske.com/wiki/Code_-_heatmaps_and_color_gradients)
-[Kernel Density Estimation (KDE) and build heat maps](https://www.geodose.com/2018/01/creating-heatmap-in-python-from-scratch.html)
-[Iterative heat map build](https://github.com/jjguy/heatmap)
+* [Osm major world cittes database](http://download.bbbike.org/osm/bbbike/)
+* [Angular 6.1 framework](https://angular.io)
+* [Inverse Distance Weighting (IDW) idea](https://en.wikipedia.org/wiki/Inverse_distance_weighting)
+* [Build heat map on the IDW base](https://github.com/optimisme/javascript-temperatureMap)
+* [Build heat map color gradients](http://www.andrewnoske.com/wiki/Code_-_heatmaps_and_color_gradients)
+* [Kernel Density Estimation (KDE) and build heat maps](https://www.geodose.com/2018/01/creating-heatmap-in-python-from-scratch.html)
+* [Iterative heat map build](https://github.com/jjguy/heatmap)
 
 
 ## Prerequisites
