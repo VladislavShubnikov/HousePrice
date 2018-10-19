@@ -13,6 +13,11 @@ real estate prices and show houses/appertments for sale as a points on map.
 Project create pric prediction model for any map point and display this model as a colored gradient map.
 Details will be written later.
 
+### Working web-app demonstration
+You can try live demo:
+http://d-inter.ru/private/Vlad/nirs/2018_HousePrice/HsPrcAng/
+
+
 ### Implementation notes
 
 Will be later
@@ -39,6 +44,11 @@ Run `ng lint` to compile project source codes.
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Better way for final deployment is command:
+```
+ng build --prod --base-href https://your.site/somefolder/
+```
+
 
 ## Running unit tests
 
